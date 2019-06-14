@@ -1172,7 +1172,7 @@ all reachable through 'M-x customize', in group 'Emacs.Editing.I18n.Po'."
 
   (setq po-mode-flag t)
 
-  (po-check-file-header)
+  ;; (po-check-file-header)
   (po-compute-counters nil)
 
   (set (make-local-variable 'po-edited-fields) nil)
@@ -1865,7 +1865,8 @@ If FORM is itself a string, then this string is used for insertion."
               ((eq (preceding-char) ?\n)
                (replace-match (if (or (not multi-line) (eobp))
                                   "\\n"
-                                "\\n\"\n\"")
+                                "\"\n\"")
+                                ;; "\\n\"\n\"")
                               t t))
               ((eq (preceding-char) ?\r) (replace-match "\\r" t t))
               ((eq (preceding-char) ?\t) (replace-match "\\t" t t))
