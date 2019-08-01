@@ -1,0 +1,7 @@
+This is major mode for GNU gettext PO files.
+
+Modifications:
+
+- Newlines are not keeped in raw format "\\n" after editing the msgstr.
+
+- Accordingly, msgstr in multiple lines without raw "\\n" will keep original format when editing.
